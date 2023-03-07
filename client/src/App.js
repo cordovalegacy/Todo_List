@@ -5,12 +5,14 @@ import {useState} from 'react';
 
 function App() {
 
-  const [tasks, setTasks] = useState([])
+  const [tasks, setTasks] = useState([
+    {description: "Make a task", checked: false}
+  ])
 
   return (
     <div className="App">
       <Form tasks={tasks} setTasks={setTasks} />
-      <Display tasks={tasks} />
+      <Display tasks={tasks} setTasks={setTasks} />
     </div>
   );
 }

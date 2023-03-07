@@ -7,7 +7,7 @@ const Form = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        setTasks([...tasks, singleTask])
+        setTasks([...tasks, {description: singleTask, checked: false }])
         setSingleTask("")
     }
 
